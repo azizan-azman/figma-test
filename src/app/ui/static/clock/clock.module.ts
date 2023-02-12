@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule, DatePipe } from '@angular/common';
 import { ClockComponent } from './clock.component';
-import { IconModule } from '../../reusable/icon/icon.module';
+import { IconModule } from '../../customizable/icon/icon.module';
 
 @NgModule({
   declarations: [ClockComponent],

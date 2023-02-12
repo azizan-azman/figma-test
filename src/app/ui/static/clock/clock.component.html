@@ -1,5 +1,16 @@
+<!--
+  Static Clock component.
+
+  This component is fixed, and only returns a string of current date and time (not real-time update).
+  This component does not behave like a real clock and is only for UI purposes.
+
+  Here's how to use it :
+
+  <app-clock></app-clock>
+-->
+
 <div class="w-[392px] h-[32px] rounded-[4px] border border-gray-color-200 flex  justify-evenly items-center ">
-  <div class="flex gap-2 items-center ">
+  <div class="flex items-center gap-2 ">
     <app-icon [iconID]="'clock'" [iconClass]="'w-3 h-3'"></app-icon>
     <p class="text-xs font-bold">System: {{currentDateTime}} UTC</p>
   </div>

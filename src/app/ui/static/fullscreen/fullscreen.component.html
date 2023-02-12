@@ -1,10 +1,25 @@
+<!--
+  Static Fullscreen button component.
+
+  This component returns a button with an icon and a hover style.
+  When the Fullscreen button is clicked, it will display the Dashboard in fullscreen, and the icon will
+  switch to a 'minimize' icon.
+
+  When the 'minimize' icon is clicked, the Dashboard will exit from the fullscreen.
+
+  Here's how to use it :
+
+  <app-fullscreen></app-fullscreen>
+
+-->
+
 <button *ngIf="!isFullScreen"
-  class=" h-8 w-8 flex justify-center  items-center p-2 rounded-full hover:bg-primary-color-light"
+  class="flex items-center justify-center w-8 h-8 p-2 rounded-full hover:bg-primary-color-light"
   (click)="openFullscreen()">
   <app-icon [iconID]="'fullscreen2'" [iconClass]="'w-5 h-5 hover:text-primary-color' "></app-icon>
 </button>
 <button *ngIf="isFullScreen"
-  class=" h-8 w-8 flex justify-center  items-center p-2 rounded-full hover:bg-primary-color-light"
+  class="flex items-center justify-center w-8 h-8 p-2 rounded-full hover:bg-primary-color-light"
   (click)="closeFullscreen()">
   <app-icon [iconID]="'minimize'" [iconClass]="'w-5 h-5 hover:text-primary-color' "></app-icon>
 </button>

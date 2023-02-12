@@ -1,0 +1,32 @@
+<!--
+  Customizeable card with card header and body. The card is dynamic and can split
+  into sections inside the header and body. Height and width of each header and body can also be adjusted.
+
+  Say we have this data,
+
+  myData = data: {
+        cardHeader: [
+          { cardHeaderTitle: 'Clouds layer 1', cardHeaderWidth: '' },
+          { cardHeaderTitle: 'Height layer 1', cardHeaderWidth: '' },
+        ],
+        cardContent: [
+          { cardContentText: 'OVC', cardContentWidth: '' },
+          { cardContentText: '188 ft', cardContentWidth: '' },
+        ],
+      },
+
+  Here's an example on how to use it, <app-card-basic [cardData]="myData"></app-card-basic>
+ -->
+<div
+  class=" bg-gray-color-100 rounded-t-sm  min-h-[34px] border-b border-gray-color-200 flex justify-evenly text-center items-center ">
+  <p *ngFor="let header of cardData.cardHeader; let indexHeader=last"
+    class="text-sm  {{indexHeader ? '' : 'border-r'}} border-gray-color-200 {{header.cardHeaderWidth ? header.cardHeaderWidth : 'w-full' }} h-full flex items-center justify-center ">
+    {{header.cardHeaderTitle}}
+  </p>
+</div>
+<div class="bg-gray-color-50 rounded-b-sm  min-h-[36px] flex justify-evenly text-center items-center h-full ">
+  <p *ngFor="let content of cardData.cardContent; let indexContent = last "
+    class="text-lg font-bold {{indexContent ? '' : 'border-r'}} border-gray-color-200 {{content.cardContentWidth ? content.cardContentWidth : 'w-full'}} h-full flex items-center justify-center">
+    {{content.cardContentText}}
+  </p>
+</div>

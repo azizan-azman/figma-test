@@ -1,0 +1,64 @@
+<!--
+  Customizeable navigation link component. This component accepts
+  an array of object called 'sidebarNavigations' and also a
+  boolean called 'isSidebarCollapse', and returns a single
+  or multiple navigation link. The boolean 'isSidebarCollapse'
+  is used to apply animation for the nav links. There are two types of
+  navigation link that can be returned here which are
+  'available' and 'coming soon'.
+
+  The 'available' links have primary colors, hover effects and route link
+  to navigate to designated pages.
+
+  The 'coming soon' links have muted colors, and have no route link to navigate.
+
+  Based from the 'sidebarNavigations' data, a set of 'available' and 'coming soon'
+  links can be returned.
+
+  The data below will return 2 links, one is the 'available' link since its data.available parameter is true,
+  The other link would be 'coming soon' since the data.available parameter is false.
+
+  mySidebarData = [
+{
+    available: true,
+    navLinkIcon: 'pie-chart',
+    navLinkText: 'Overview',
+    navLinkURL: '/overview',
+  },
+  {
+    available: false,
+    navLinkIcon: 'lightning',
+    navLinkText: 'Lightning (Coming later)',
+    navLinkURL: '',
+  },
+];
+
+Here's how to use it :
+
+<app-navigation-link [isSidebarCollapse]="false" [sidebarNavigations]="mySidebarData"></app-navigation-link>
+
+-->
+
+
+<ul>
+  <ng-container *ngFor="let sidebarNavigation of sidebarNavigations">
+    <!-- Navigation links for available pages -->
+    <li *ngIf="sidebarNavigation.available"
+      class="flex items-center gap-6 pl-5 border-l-4 border-opacity-0 cursor-pointer h-14 hover:bg-primary-color-light border-primary-color hover:text-primary-color "
+      [routerLink]="sidebarNavigation.navLinkURL"
+      routerLinkActive=" border-opacity-100 bg-primary-color-light text-primary-color">
+      <app-icon [iconClass]="'w-6 h-6'" [iconID]="sidebarNavigation.navLinkIcon"></app-icon>
+      <p
+        class="{{isSidebarCollapse ? 'opacity-0 invisible' : 'opacity-100 visible'}} animateVisibleTransition flex-none">
+        {{sidebarNavigation.navLinkText}}</p>
+    </li>
+    <!-- Navigation links for pages that are coming soon -->
+    <li *ngIf="sidebarNavigation.available === false"
+      class="flex items-center gap-6 pl-5 border-l-4 border-white h-14 text-muted-color hover:cursor-not-allowed">
+      <app-icon [iconClass]="'w-6 h-6'" [iconID]="sidebarNavigation.navLinkIcon"></app-icon>
+      <p
+        class="{{isSidebarCollapse ? 'opacity-0 invisible' : 'opacity-100 visible'}} animateVisibleTransition flex-none">
+        {{sidebarNavigation.navLinkText}}</p>
+    </li>
+  </ng-container>
+</ul>

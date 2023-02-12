@@ -1,0 +1,18 @@
+<!--
+  Customizeable User Avatar component. This component accepts a string data
+  called 'userName', and a boolean data called 'isSidebarCollapse' and
+  returns a Circle Avatar and a username text.
+  The 'isSidebarCollapse' is used to display or hide the username.
+
+
+  Here's how to use it :
+
+  <app-user-avatar [isSidebarCollapse]="true" [userName]="'John'"></app-user-avatar>
+
+
+-->
+
+<div class="flex items-center gap-2">
+  <button class="w-10 h-10 bg-white border rounded-full border-gray-color-100">{{userInitials}}</button>
+  <span *ngIf="!isSidebarCollapse">{{userName}}</span>
+</div>

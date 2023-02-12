@@ -5,6 +5,7 @@ export const routes: Routes = [
   {
     path: 'overview',
     loadChildren: () =>
+      // Using lazy-loading strategy to load pages
       import('./features/overview/overview.module').then(
         (m) => m.OverviewModule
       ),

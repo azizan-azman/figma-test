@@ -1,3 +1,14 @@
+<!--
+  Customizeable icon component.
+  This component returns a selected svg icon.
+  This component requires a string called 'iconID' (to use a specific icon),
+  and a string 'iconClass' to apply some stylings such as width/height/color of the icon.
+
+  Here's how to use it,
+
+  <app-icon [iconID]="'arrow-right'" [iconClass]="'w-[20px] h-[20px]'"></app-icon>
+-->
+
 <svg *ngIf="iconID === 'arrow-right'" xmlns="http://www.w3.org/2000/svg" class="{{iconClass}}" width="24" height="24"
   viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -80,12 +91,7 @@
   <path fill="currentColor"
     d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2M7.7 15.5L7 14.2l4-2.3V7h1.5v5.8l-4.8 2.7Z" /></svg>
 
-<svg *ngIf="iconID === 'server'" class="{{iconClass}}" width="24" height="24" viewBox="0 0 24 24" fill="none"
-  xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" clip-rule="evenodd"
-    d="M0 1.5C0 0.947715 0.447715 0.5 1 0.5H17C17.5523 0.5 18 0.947715 18 1.5V4.5C18 5.05228 17.5523 5.5 17 5.5H1C0.447716 5.5 0 5.05228 0 4.5V1.5ZM0 7.5C0 6.94772 0.447715 6.5 1 6.5H17C17.5523 6.5 18 6.94772 18 7.5V10.5C18 11.0523 17.5523 11.5 17 11.5H1C0.447716 11.5 0 11.0523 0 10.5V7.5ZM1 12.5C0.447715 12.5 0 12.9477 0 13.5V16.5C0 17.0523 0.447716 17.5 1 17.5H17C17.5523 17.5 18 17.0523 18 16.5V13.5C18 12.9477 17.5523 12.5 17 12.5H1ZM16 3.5C16 4.05228 15.5523 4.5 15 4.5C14.4477 4.5 14 4.05228 14 3.5C14 2.94772 14.4477 2.5 15 2.5C15.5523 2.5 16 2.94772 16 3.5ZM15 10.5C15.5523 10.5 16 10.0523 16 9.5C16 8.94771 15.5523 8.5 15 8.5C14.4477 8.5 14 8.94771 14 9.5C14 10.0523 14.4477 10.5 15 10.5ZM16 15.5C16 16.0523 15.5523 16.5 15 16.5C14.4477 16.5 14 16.0523 14 15.5C14 14.9477 14.4477 14.5 15 14.5C15.5523 14.5 16 14.9477 16 15.5ZM12 4.5C12.5523 4.5 13 4.05228 13 3.5C13 2.94772 12.5523 2.5 12 2.5C11.4477 2.5 11 2.94772 11 3.5C11 4.05228 11.4477 4.5 12 4.5ZM13 9.5C13 10.0523 12.5523 10.5 12 10.5C11.4477 10.5 11 10.0523 11 9.5C11 8.94771 11.4477 8.5 12 8.5C12.5523 8.5 13 8.94771 13 9.5ZM12 16.5C12.5523 16.5 13 16.0523 13 15.5C13 14.9477 12.5523 14.5 12 14.5C11.4477 14.5 11 14.9477 11 15.5C11 16.0523 11.4477 16.5 12 16.5Z"
-    fill="#3B4956" />
-</svg>
+
 
 <svg *ngIf="iconID === 'server2'" xmlns="http://www.w3.org/2000/svg" class="{{iconClass}}" width="24" height="24"
   viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -96,13 +102,7 @@
   <path d="M7 16l0 .01"></path>
 </svg>
 
-<svg *ngIf="iconID === 'bell'" xmlns="http://www.w3.org/2000/svg" class="{{iconClass}}" width="24" height="24"
-  viewBox="0 0 24 24">
-  <path fill="currentColor"
-    d="m32.85 28.13l-.34-.3A14.37 14.37 0 0 1 30 24.9a12.63 12.63 0 0 1-1.35-4.81v-4.94A10.81 10.81 0 0 0 19.21 4.4V3.11a1.33 1.33 0 1 0-2.67 0v1.31a10.81 10.81 0 0 0-9.33 10.73v4.94a12.63 12.63 0 0 1-1.35 4.81a14.4 14.4 0 0 1-2.47 2.93l-.34.3v2.82h29.8Z"
-    class="clr-i-solid clr-i-solid-path-1" />
-  <path fill="currentColor" d="M15.32 32a2.65 2.65 0 0 0 5.25 0Z" class="clr-i-solid clr-i-solid-path-2" />
-  <path fill="none" d="M0 0h36v36H0z" /></svg>
+
 
 <svg *ngIf="iconID === 'bell2'" xmlns="http://www.w3.org/2000/svg" class="{{iconClass}}" width="24" height="24"
   viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -112,12 +112,7 @@
   <path d="M9 17v1a3 3 0 0 0 6 0v-1"></path>
 </svg>
 
-<svg *ngIf="iconID === 'fullscreen'" width="24" height="24" class="{{iconClass}}" viewBox="0 0 24 24" fill="none"
-  xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" clip-rule="evenodd"
-    d="M2 15C2 15.55 2.45 16 3 16H15C15.55 16 16 15.55 16 15V10C16 9.45 16.45 9 17 9C17.55 9 18 9.45 18 10V16C18 17.1 17.1 18 16 18H2C0.9 18 0 17.1 0 16V2C0 0.9 0.89 0 2 0H8C8.55 0 9 0.45 9 1C9 1.55 8.55 2 8 2H3C2.45 2 2 2.45 2 3V15ZM12 2C11.45 2 11 1.55 11 1C11 0.45 11.45 0 12 0H17C17.55 0 18 0.45 18 1V6C18 6.55 17.55 7 17 7C16.45 7 16 6.55 16 6V3.41L6.87 12.54C6.48 12.93 5.85 12.93 5.46 12.54C5.07 12.15 5.07 11.52 5.46 11.13L14.59 2H12Z"
-    fill="#3B4956" />
-</svg>
+
 
 <svg *ngIf="iconID === 'fullscreen2'" width="24" height="24" class="{{iconClass}}" xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">

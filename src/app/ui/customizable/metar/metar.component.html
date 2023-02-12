@@ -1,0 +1,15 @@
+<!--
+  Customizeable Metar component. This component accepts a string called 'metarText',
+  and returns a long and narrow card with some Text inside it.
+
+  Here's how to use it,
+
+  <app-metar [metarText]="'Hello World'"></app-metar>
+-->
+
+<app-widget-wrapper [widgetWidth]="'w-[1135px]'" [widgetHeight]="'h-[40px]'" [widgetPadding]="'px-[16px] py-[8px]'">
+  <div class="flex items-center w-full">
+    <p class="text-lg text-muted-color">{{metarText}}</p>
+  </div>
+
+</app-widget-wrapper>

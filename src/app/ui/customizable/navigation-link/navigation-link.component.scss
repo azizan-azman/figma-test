@@ -1,0 +1,4 @@
+// Class to apply transition animation of nav link texts through change of visiblity
+.animateVisibleTransition {
+  transition: visibility 0s, opacity 0.5s linear;
+}

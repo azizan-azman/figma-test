@@ -1,15 +1,21 @@
-<div class="w-full flex flex-col items-center ">
-  <div class="flex  ">
+<!-- Flex Container to center all the components vertically and horizontally -->
+<div class="flex flex-col items-center w-full ">
+  <!-- Overview wind section Container -->
+  <div class="flex ">
+    <!-- Overview wind section -->
     <app-widget-wrapper [widgetTitle]="'Wind'" [widgetWidth]="'w-[520px]'" [widgetHeight]="'h-[407px]'"
       [widgetBorderRadius]="'rounded-tr-none rounded-[4px] rounded-br-none'" [widgetBorder]="'border border-r-0'"
       [widgetPadding]="'p-[21px]'">
+      <!-- Wind speed line chart section -->
       <div class="w-[470px]">
         <canvas id="overviewWindSpeedLineChart"></canvas>
       </div>
+      <!-- Wind Direction line chart section -->
       <div class="w-[470px]">
         <canvas id="overviewWindDirectionLineChart"></canvas>
       </div>
     </app-widget-wrapper>
+    <!-- Wind card data section, inside a grid column 1 layout -->
     <app-widget-wrapper [widgetWidth]="'w-[300px]'" [widgetHeight]="'h-[407px]'" [widgetBorderRadius]="'rounded-none'">
       <div class=" grid grid-cols-1 h-[360px] gap-5 w-full ">
         <app-card-basic [cardData]="cardData.data" *ngFor="let cardData of windData"
@@ -17,40 +23,41 @@
         </app-card-basic>
       </div>
     </app-widget-wrapper>
+    <!-- Wind Helipad Section -->
     <app-widget-wrapper [widgetWidth]="'w-[315px]'" [widgetHeight]="'h-[407px]'"
       [widgetBorderRadius]="'rounded-tl-none rounded-bl-none rounded-[4px]'" [widgetBorder]="'border border-l-0'">
       <div class="w-full  flex justify-center items-center h-[360px]">
         <img src="../../../../assets/images/helipad.png" class="w-full" alt="helipad-image">
-        <!-- <div class="bg-primary-color-dark rounded-full p-10">
-          <app-icon [iconID]="'helipad'" [iconClass]="'w-[100px] h-[100px] text-white'"></app-icon>
-        </div> -->
-
       </div>
     </app-widget-wrapper>
   </div>
+  <!-- Flex container for Waves and Weather section -->
   <div class="flex gap-5 mt-5">
+    <!-- Waves section -->
     <app-widget-wrapper [widgetTitle]="'Waves'" [widgetWidth]="'w-[558px]'" [widgetHeight]="'h-[407px]'"
       [widgetPadding]="'p-[21px]'">
+      <!-- Waves card data inside a grid layout -->
       <div class="w-full grid grid-cols-6 gap-2 mb-[16px]">
         <app-card-basic [cardData]="cardData.data" *ngFor="let cardData of wavesData"
           class="{{cardData.rowSpan}} {{cardData.colSpan}} flex flex-col rounded-sm border border-gray-color-200">
         </app-card-basic>
       </div>
+      <!-- Waves line chart  -->
       <div class="w-[520px]">
         <canvas id="overviewWavesLineChart"></canvas>
       </div>
-
     </app-widget-wrapper>
-
+    <!-- Weather section -->
     <app-widget-wrapper [widgetTitle]="'Weather'" [widgetWidth]="'w-[558px]'">
-      <div class="w-full grid grid-cols-6 gap-2">
+      <!-- Weather card data inside a grid layout -->
+      <div class="grid w-full grid-cols-6 gap-2">
         <app-card-basic [cardData]="cardData.data" *ngFor="let cardData of weatherData"
           class="{{cardData.rowSpan}} {{cardData.colSpan}} flex flex-col rounded-sm border border-gray-color-200">
         </app-card-basic>
-
       </div>
     </app-widget-wrapper>
   </div>
+  <!-- Metar section -->
   <div class="mt-5">
     <app-metar [metarText]="metarText"></app-metar>
   </div>

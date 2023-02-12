@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NotificationComponent } from './notification.component';
-import { IconModule } from '../../reusable/icon/icon.module';
+import { IconModule } from '../../customizable/icon/icon.module';
 
 @NgModule({
   declarations: [NotificationComponent],

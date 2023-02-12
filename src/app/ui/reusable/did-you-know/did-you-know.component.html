@@ -1,0 +1,9 @@
+<div *ngIf="!isSidebarCollapse"
+  class="bg-primary-color-light w-52 px-4 py-6 rounded-lg flex flex-col justify-center items-center gap-2 relative  animateDidYouKnowGrow">
+  <p class="text-lg font-bold">Did you know</p>
+  <p class="text-base text-center">{{infoText}}</p>
+  <div
+    class="absolute -top-5 border-4 border-primary-color-light left-auto right-auto w-11 h-11 bg-white rounded-full flex justify-center items-center">
+    <app-icon [iconID]="'bulb'" [iconClass]="'w-5 h-5 text-primary-color-dark'"></app-icon>
+  </div>
+</div>

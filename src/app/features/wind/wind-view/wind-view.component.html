@@ -1,0 +1,29 @@
+<div class="flex">
+  <app-widget-wrapper [widgetTitle]="'Wind'" [widgetWidth]="'w-[500px]'" [widgetHeight]="'h-[407px]'"
+    [widgetBorderRadius]="'rounded-tr-none rounded-[4px] rounded-br-none'" [widgetBorder]="'border border-r-0'"
+    [widgetPadding]="'p-[21px]'">
+    <div class="w-[450px]">
+      <canvas id="windSpeedLineChart"></canvas>
+    </div>
+    <div class="w-[450px]">
+      <canvas id="windDirectionLineChart"></canvas>
+    </div>
+  </app-widget-wrapper>
+  <app-widget-wrapper [widgetWidth]="'w-[300px]'" [widgetHeight]="'h-[407px]'" [widgetBorderRadius]="'rounded-none'">
+    <div class=" grid grid-cols-1 h-[360px] gap-5 w-full ">
+      <app-card-basic [cardData]="cardData.data" *ngFor="let cardData of data"
+        class="{{cardData.rowSpan}} {{cardData.colSpan}}  flex flex-col rounded-sm border border-gray-color-200">
+      </app-card-basic>
+    </div>
+  </app-widget-wrapper>
+  <app-widget-wrapper [widgetWidth]="'w-[300px]'" [widgetHeight]="'h-[407px]'"
+    [widgetBorderRadius]="'rounded-tl-none rounded-bl-none rounded-[4px]'" [widgetBorder]="'border border-l-0'">
+    <div class="w-full  flex justify-center items-center h-[360px]">
+      <img src="../../../../assets/images/helipad.png" class="w-full" alt="helipad-image">
+      <!-- <div class="bg-primary-color-dark rounded-full p-10">
+        <app-icon [iconID]="'helipad'" [iconClass]="'w-[100px] h-[100px] text-white'"></app-icon>
+      </div> -->
+
+    </div>
+  </app-widget-wrapper>
+</div>

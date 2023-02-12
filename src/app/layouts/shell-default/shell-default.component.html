@@ -1,0 +1,93 @@
+<!-- Layout container -->
+<div class="flex ">
+  <!-- Sidebar section -->
+  <nav
+    class="bg-white {{ isSidebarCollapse ?  'w-20' : 'w-72'}}  h-screen  flex flex-col justify-between items-center animateSidebar shadow-md">
+    <!-- Sidebar top section -->
+    <div class="flex flex-col gap-2 w-full">
+      <!-- Sidebar header with logo and text -->
+      <header class="flex gap-5 mt-8 px-5 items-center">
+        <div class="w-9 h-9 rounded-full flex-none flex justify-center items-center bg-primary-color">
+          <p class="text-white text-sm ">Logo</p>
+        </div>
+        <div class="flex-none leading-none">
+          <p
+            class="font-bold {{isSidebarCollapse ? 'opacity-0 invisible' : 'opacity-100 visible'}} animateVisibleTransition">
+            Figma Test</p>
+          <p
+            class="text-sm {{isSidebarCollapse ? 'opacity-0 invisible' : 'opacity-100 visible'}} animateVisibleTransition">
+            Hello
+            world</p>
+        </div>
+      </header>
+      <!-- Sidebar navigation link -->
+      <app-navigation-link class="mt-10" [isSidebarCollapse]="isSidebarCollapse"
+        [sidebarNavigations]="sidebarNavigations">
+      </app-navigation-link>
+      <!-- <ul class="mt-10">
+        <ng-container *ngFor="let sidebarNavigation of sidebarNavigations">
+
+          <li *ngIf="sidebarNavigation.available"
+            class="flex gap-6 items-center h-14 hover:bg-primary-color-light border-l-4 border-primary-color border-opacity-0 hover:text-primary-color cursor-pointer pl-5 "
+            [routerLink]="sidebarNavigation.navLinkURL"
+            routerLinkActive=" border-opacity-100 bg-primary-color-light text-primary-color">
+            <app-icon [iconClass]="'w-6 h-6'" [iconID]="sidebarNavigation.navLinkIcon"></app-icon>
+            <p
+              class="{{isSidebarCollapse ? 'opacity-0 invisible' : 'opacity-100 visible'}} animateVisibleTransition flex-none">
+              {{sidebarNavigation.navLinkText}}</p>
+          </li>
+
+          <li *ngIf="sidebarNavigation.available === false"
+            class="flex gap-6 items-center h-14 text-muted-color border-l-4 border-white pl-5 hover:cursor-not-allowed">
+            <app-icon [iconClass]="'w-6 h-6'" [iconID]="sidebarNavigation.navLinkIcon"></app-icon>
+            <p
+              class="{{isSidebarCollapse ? 'opacity-0 invisible' : 'opacity-100 visible'}} animateVisibleTransition flex-none">
+              {{sidebarNavigation.navLinkText}}</p>
+          </li>
+        </ng-container>
+      </ul> -->
+    </div>
+    <!-- Sidebar bottom section -->
+    <div class="px-6 py-6 flex flex-col gap-10 justify-center ">
+      <!-- 'Did you know' card -->
+      <app-did-you-know [isSidebarCollapse]="isSidebarCollapse" [infoText]="didYouKnowText"></app-did-you-know>
+      <!-- User avatar and Sidebar toggle button -->
+      <div
+        class="flex justify-between items-center animateFlexDirection {{ isSidebarCollapse ? 'flex-col gap-3 w-0' : 'flex-row w-52'}} ">
+        <!-- User avatar -->
+        <app-user-avatar [isSidebarCollapse]="isSidebarCollapse" [userName]="userAvatarName"></app-user-avatar>
+        <!-- Sidebar toggle button -->
+        <button
+          class="bg-primary-color-light rounded-full p-1 animateTransition {{ isSidebarCollapse ? 'rotateArrowClockwise' : ''}}"
+          (click)=" toggleWidth()">
+          <app-icon [iconID]="'arrow-left'" [iconClass]="'w-7 h-7'"></app-icon>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <!-- Topbar, Content, Footer section -->
+  <div class="  w-full flex justify-between flex-col overflow-y-auto  h-screen">
+    <div class="">
+      <!-- Topbar section -->
+      <header class="w-full h-20  px-6 py-3 flex justify-between items-end">
+        <div>
+          <app-select-station></app-select-station>
+        </div>
+        <div class="flex items-center gap-2">
+          <app-clock></app-clock>
+          <app-system-status></app-system-status>
+          <app-notification></app-notification>
+          <app-fullscreen></app-fullscreen>
+        </div>
+      </header>
+      <!-- Content section -->
+      <section class=" px-6 py-3">
+        <ng-content></ng-content>
+      </section>
+    </div>
+    <!-- Footer section -->
+    <footer class="w-full h-28 flex justify-center items-center  px-6 py-3">
+      <p class="text-sm">Figma Test by Azizan Azman</p>
+    </footer>
+  </div>
+</div>

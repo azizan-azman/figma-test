@@ -1,0 +1,47 @@
+// --Colors--
+// Neutral Colors
+$white-color: #ffffff;
+$gray-color-50: #f5f6f7; // for content background & card content background
+$gray-color-100: #e5e8eb; // for card header background & user icon border
+$gray-color-200: #b3bbc2; // for card header border
+$black-color: #000000;
+$muted-color: #99a4ae;
+
+// Primary & secondary
+$primary-color: #4099da;
+$primary-color-light: #eaf4fb;
+$primary-color-dark: #1d6396;
+
+// Text color
+$base-color: #3b4956; // for Text colors except for muted
+
+// --Typography--
+// Font Family
+$font-stack: "Sulphur Point", sans-serif;
+
+// Font Weight
+$light: 300;
+$regular: 400;
+$bold: 700;
+
+// Font size & Line height
+$font-xs: 0.6875rem; // 11px
+$font-line-height-xs: 1rem; // 16px
+
+$font-sm: 0.75rem; // 12px
+$font-line-height-sm: 1.125rem; // 18px
+
+$font-base: 0.875rem; // 14px
+$font-line-height-base: 1.3125rem; // 21px
+
+$font-lg: 1rem; // 16px
+$font-line-height-lg: 1.5rem; // 24px
+
+$font-xl: 1.125rem; // 18px
+$font-line-height-xl: 1.6875rem; // 27px
+
+// Transition
+$tran-02: all 0.2s ease;
+$tran-03: all 0.3s ease;
+$tran-04: all 0.4s ease;
+$tran-05: all 0.5s ease;

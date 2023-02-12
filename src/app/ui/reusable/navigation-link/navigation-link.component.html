@@ -1,0 +1,22 @@
+<ul>
+  <ng-container *ngFor="let sidebarNavigation of sidebarNavigations">
+    <!-- Navigation links for available pages -->
+    <li *ngIf="sidebarNavigation.available"
+      class="flex gap-6 items-center h-14 hover:bg-primary-color-light border-l-4 border-primary-color border-opacity-0 hover:text-primary-color cursor-pointer pl-5 "
+      [routerLink]="sidebarNavigation.navLinkURL"
+      routerLinkActive=" border-opacity-100 bg-primary-color-light text-primary-color">
+      <app-icon [iconClass]="'w-6 h-6'" [iconID]="sidebarNavigation.navLinkIcon"></app-icon>
+      <p
+        class="{{isSidebarCollapse ? 'opacity-0 invisible' : 'opacity-100 visible'}} animateVisibleTransition flex-none">
+        {{sidebarNavigation.navLinkText}}</p>
+    </li>
+    <!-- Navigation links for pages that are coming soon -->
+    <li *ngIf="sidebarNavigation.available === false"
+      class="flex gap-6 items-center h-14 text-muted-color border-l-4 border-white pl-5 hover:cursor-not-allowed">
+      <app-icon [iconClass]="'w-6 h-6'" [iconID]="sidebarNavigation.navLinkIcon"></app-icon>
+      <p
+        class="{{isSidebarCollapse ? 'opacity-0 invisible' : 'opacity-100 visible'}} animateVisibleTransition flex-none">
+        {{sidebarNavigation.navLinkText}}</p>
+    </li>
+  </ng-container>
+</ul>

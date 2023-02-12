@@ -1,0 +1,8 @@
+<app-widget-wrapper [widgetTitle]="'Weather'">
+  <div class="w-full grid grid-cols-6 gap-2">
+    <app-card-basic [cardData]="cardData.data" *ngFor="let cardData of data"
+      class="{{cardData.rowSpan}} {{cardData.colSpan}} flex flex-col rounded-sm border border-gray-color-200">
+    </app-card-basic>
+
+  </div>
+</app-widget-wrapper>

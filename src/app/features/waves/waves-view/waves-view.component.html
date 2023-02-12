@@ -1,0 +1,12 @@
+<app-widget-wrapper [widgetTitle]="'Waves'" [widgetWidth]="'w-[760px]'" [widgetHeight]="'h-[407px]'"
+  [widgetPadding]="'p-[21px]'">
+  <div class="w-full grid grid-cols-6 gap-2 mb-[16px]">
+    <app-card-basic [cardData]="cardData.data" *ngFor="let cardData of data"
+      class="{{cardData.rowSpan}} {{cardData.colSpan}} flex flex-col rounded-sm border border-gray-color-200">
+    </app-card-basic>
+  </div>
+  <div class="w-[720px]">
+    <canvas id="wavesLineChart"></canvas>
+  </div>
+
+</app-widget-wrapper>

@@ -1,0 +1,7 @@
+<div
+  class="{{ widgetWidth ? widgetWidth : 'w-[561px]'}} {{ widgetHeight ? widgetHeight :'h-[407px]'}} {{ widgetPadding ? widgetPadding : 'p-[16px]'}} bg-white {{ widgetBorderRadius ? widgetBorderRadius : 'rounded-[4px]'}} {{widgetBorder ? widgetBorder: 'border'}}  border-gray-color-200 shadow">
+  <p *ngIf="widgetTitle" class="text-xl font-bold mb-[16px]">{{widgetTitle}}</p>
+  <section>
+    <ng-content></ng-content>
+  </section>
+</div>

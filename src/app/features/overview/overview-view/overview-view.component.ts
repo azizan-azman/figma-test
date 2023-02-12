@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart, registerables } from 'node_modules/chart.js';
 import { metarData } from 'src/app/data-access/mock-data/metar-data';
+import { wavesData } from 'src/app/data-access/mock-data/waves-data';
+import { wavesLineChartData } from 'src/app/data-access/mock-data/waves-line-chart-data';
+import { weatherData } from 'src/app/data-access/mock-data/weather-data';
+import { windData } from 'src/app/data-access/mock-data/wind-data';
+import { windDirectionLineChartData } from 'src/app/data-access/mock-data/wind-direction-line-chart-data';
+import { windSpeedLineChartData } from 'src/app/data-access/mock-data/wind-speed-line-chart-data';
 import { FeatureData } from 'src/app/data-access/models/feature-data.model';
 import { LineChart } from 'src/app/data-access/models/line-chart-data.model';
-import { overviewWavesData } from '../../../data-access/mock-data/overview-waves-data';
-import { overviewWavesLineChartData } from '../../../data-access/mock-data/overview-waves-line-chart-data';
-import { overviewWeatherData } from '../../../data-access/mock-data/overview-weather-data';
-import { overviewWindData } from '../../../data-access/mock-data/overview-wind-data';
-import { overviewWindDirectionLineChartData } from '../../../data-access/mock-data/overview-wind-direction-line-chart-data';
-import { overviewWindSpeedLineChartData } from '../../../data-access/mock-data/overview-wind-speed-line-chart-data';
+
 Chart.register(...registerables);
 
 @Component({
@@ -17,13 +18,12 @@ Chart.register(...registerables);
   styleUrls: ['./overview-view.component.scss'],
 })
 export class OverviewViewComponent implements OnInit {
-  overviewWindDirectionLineChart: LineChart =
-    overviewWindDirectionLineChartData;
-  overviewWindSpeedLineChart: LineChart = overviewWindSpeedLineChartData;
-  overviewWavesLineChart: LineChart = overviewWavesLineChartData;
-  windData: FeatureData[] = overviewWindData;
-  weatherData: FeatureData[] = overviewWeatherData;
-  wavesData: FeatureData[] = overviewWavesData;
+  overviewWindDirectionLineChart: LineChart = windDirectionLineChartData;
+  overviewWindSpeedLineChart: LineChart = windSpeedLineChartData;
+  overviewWavesLineChart: LineChart = wavesLineChartData;
+  windData: FeatureData[] = windData;
+  weatherData: FeatureData[] = weatherData;
+  wavesData: FeatureData[] = wavesData;
   metarText: string = metarData;
 
   constructor() {}

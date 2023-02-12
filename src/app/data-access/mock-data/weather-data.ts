@@ -6,7 +6,7 @@ export const weatherData: FeatureData[] = [
     rowSpan: '',
     data: {
       cardHeader: [{ cardHeaderTitle: 'Sea Temperature', cardHeaderWidth: '' }],
-      cardContent: [{ cardContentText: '6.1 degree', cardContentWidth: '' }],
+      cardContent: [{ cardContentText: '6.1° C', cardContentWidth: '' }],
     },
   },
   {
@@ -34,7 +34,7 @@ export const weatherData: FeatureData[] = [
     rowSpan: '',
     data: {
       cardHeader: [{ cardHeaderTitle: 'Humidity', cardHeaderWidth: '' }],
-      cardContent: [{ cardContentText: '90%', cardContentWidth: '' }],
+      cardContent: [{ cardContentText: '90 %', cardContentWidth: '' }],
     },
   },
   {
@@ -42,7 +42,7 @@ export const weatherData: FeatureData[] = [
     rowSpan: '',
     data: {
       cardHeader: [{ cardHeaderTitle: 'Air Temperature', cardHeaderWidth: '' }],
-      cardContent: [{ cardContentText: '6.9 C', cardContentWidth: '' }],
+      cardContent: [{ cardContentText: '6.9° C', cardContentWidth: '' }],
     },
   },
   {
@@ -50,7 +50,7 @@ export const weatherData: FeatureData[] = [
     rowSpan: '',
     data: {
       cardHeader: [{ cardHeaderTitle: 'Dew Point', cardHeaderWidth: '' }],
-      cardContent: [{ cardContentText: '5.3 C', cardContentWidth: '' }],
+      cardContent: [{ cardContentText: '5.3° C', cardContentWidth: '' }],
     },
   },
   {
@@ -95,8 +95,8 @@ export const weatherData: FeatureData[] = [
         { cardHeaderTitle: 'Height layer 2', cardHeaderWidth: '' },
       ],
       cardContent: [
-        { cardContentText: '---', cardContentWidth: '' },
-        { cardContentText: '---', cardContentWidth: '' },
+        { cardContentText: '- - -', cardContentWidth: '' },
+        { cardContentText: '- - -', cardContentWidth: '' },
       ],
     },
   },

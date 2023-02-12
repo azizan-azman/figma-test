@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+
+// To use Tailwindcss utility
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,14 +8,15 @@
 @import "./variables";
 @import "./fonts";
 
+// To reset all margin and padding of a browser element, and to set the font stack.
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: $font-stack;
-  // color: #3b4956;
 }
 
+// To set the neutral background color, and also to set the default text color
 body {
   min-height: 100vh;
   background-color: $gray-color-50;

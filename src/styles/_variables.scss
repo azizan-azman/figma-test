@@ -1,3 +1,5 @@
+// ### Please also review tailwind.config.js to see all the variables used for colors and typography
+
 // --Colors--
 // Neutral Colors
 $white-color: #ffffff;
@@ -14,6 +16,12 @@ $primary-color-dark: #1d6396;
 
 // Text color
 $base-color: #3b4956; // for Text colors except for muted
+
+// Success color
+$success-color: #117e36; // for Server Icon status
+
+// Warning or Notification color
+$notification-color: #e85757; // for Notification Icon
 
 // --Typography--
 // Font Family

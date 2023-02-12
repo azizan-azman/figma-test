@@ -36,7 +36,14 @@ export const routes: Routes = [
         (m) => m.LightningModule
       ),
   },
+  {
+    path: '404-not-found',
+    loadChildren: () =>
+      import('./features/error-page/error-page.module').then(
+        (m) => m.ErrorPageModule
+      ),
+  },
 
   // Fallback when no prior route is matched
-  { path: '**', redirectTo: '', pathMatch: 'full' },
+  { path: '**', redirectTo: '404-not-found', pathMatch: 'full' },
 ];

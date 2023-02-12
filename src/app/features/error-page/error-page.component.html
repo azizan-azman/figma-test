@@ -1,0 +1,11 @@
+<div class="flex flex-col items-center ">
+  <app-icon [iconID]="'404'" [iconClass]="'w-[404px] h-[404px]'"></app-icon>
+  <p class="text-4xl font-bold">Oops! This Page Could Not Be Found</p>
+  <div class="flex flex-col items-center w-[570px] gap-5 mt-5">
+    <p class="text-lg">Sorry, the page you are looking for either does not exist, have been removed, name changed or
+      is temporarily
+      unavailable.</p>
+    <a class="underline text-primary-color" [routerLink]="['/overview']">Back to Home</a>
+  </div>
+
+</div>
